@@ -1,0 +1,20 @@
+- AI Crypto advisor
+Concept
+Build a web app that serves as a crypto investor dashboard. The app shows
+daily content. A fun meme is also shown dynamically each time the
+dashboard updates.
+Pages & Features
+1. Login/Signup
+- Register with email, name, and password.
+- Login page with basic authentication (JWT or session-based).
+2. Daily Dashboard
+- Display 4 sections:
+- Market News (CryptoPanic API or static fallback)
+- Coin Prices (CoinGecko AP
+
+Technical Guidelines
+- Backend: node.js / any framework
+- Frontend: React or Next.js
+- Database: SQLite, PostgreSQL, or MongoDB
+- Use only free public APIs and free-tier AI tools
+- Focus on clean UX, readable code, and good structure
