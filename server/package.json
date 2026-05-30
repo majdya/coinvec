@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "tsx watch src/index.ts",
-    "start": "tsx src/index.ts",
+    "start": "prisma generate && tsx src/index.ts",
     "db:generate": "prisma generate",
     "db:push": "prisma db push",
     "test": "tsx --test src/__tests__/auth.test.js",
@@ -25,7 +25,8 @@
     "express": "^5.2.1",
     "jsonwebtoken": "^9.0.3",
     "pg": "^8.21.0",
-    "prisma": "^7.8.0"
+    "prisma": "^7.8.0",
+    "tsx": "^4.22.3"
   },
   "devDependencies": {
     "@types/bcrypt": "^6.0.0",
@@ -34,7 +35,6 @@
     "@types/jsonwebtoken": "^9.0.10",
     "@types/node": "^25.9.1",
     "supertest": "^7.2.2",
-    "tsx": "^4.22.3",
     "typescript": "^6.0.3"
   }
 }
