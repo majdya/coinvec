@@ -1,9 +1,9 @@
 import { PrismaClient } from "@prisma/client";
+import { PrismaPg } from "@prisma/adapter-pg";
 
-if (process.env.NEON_DB_CONNECTION_STRING) {
-  process.env.DATABASE_URL = process.env.NEON_DB_CONNECTION_STRING;
-}
+const connectionString = process.env.NEON_DB_CONNECTION_STRING || process.env.DATABASE_URL;
 
-const prisma = new PrismaClient();
+const adapter = new PrismaPg({ connectionString });
+const prisma = new PrismaClient({ adapter });
 
 export default prisma;
